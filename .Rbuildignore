@@ -1,0 +1,7 @@
+^renv$
+^renv\.lock$
+^sequentially\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^README\.Rmd$
+^\.github$
