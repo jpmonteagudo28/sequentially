@@ -9,7 +9,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  out.width = "100%"
+  out.width = "85%"
 )
 
 #library(sequentially)
@@ -22,6 +22,8 @@ knitr::opts_chunk$set(
 ![](https://img.shields.io/badge/fun_but_useless-%23035949)
 [![CRAN status](https://www.r-pkg.org/badges/version/sequentially)](https://CRAN.R-project.org/package=sequentially)
 [![stability-wip](https://img.shields.io/badge/stability-wip-lightgrey.svg)](https://github.com/mkenney/software-guides/blob/master/STABILITY-BADGES.md#work-in-progress)
+[![Codecov test
+coverage](https://codecov.io/gh/jpmonteagudo28/sequentially/graph/badge.svg)](https://app.codecov.io/gh/jpmonteagudo28/sequentially)
 
 <!-- badges: end -->
 

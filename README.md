@@ -8,6 +8,8 @@
 ![](https://img.shields.io/badge/fun_but_useless-%23035949) [![CRAN
 status](https://www.r-pkg.org/badges/version/sequentially)](https://CRAN.R-project.org/package=sequentially)
 [![stability-wip](https://img.shields.io/badge/stability-wip-lightgrey.svg)](https://github.com/mkenney/software-guides/blob/master/STABILITY-BADGES.md#work-in-progress)
+[![Codecov test
+coverage](https://codecov.io/gh/jpmonteagudo28/sequentially/graph/badge.svg)](https://app.codecov.io/gh/jpmonteagudo28/sequentially)
 
 <!-- badges: end -->
 
@@ -53,7 +55,7 @@ library(sequentially)
  mtext("Linear Sequence",3,cex = 1.3, family = "serif")
 ```
 
-<img src="man/figures/README-example-1.png" width="100%" />
+<img src="man/figures/README-example-1.png" width="85%" />
 
 ``` r
 
@@ -69,7 +71,7 @@ library(sequentially)
  mtext("Ease-out Elastic Sequence",3,cex = 1.3, family = "serif")
 ```
 
-<img src="man/figures/README-example-2.png" width="100%" />
+<img src="man/figures/README-example-2.png" width="85%" />
 
 What is special about using `README.Rmd` instead of just `README.md`?
 You can include R chunks like so:
