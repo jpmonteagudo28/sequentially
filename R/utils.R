@@ -25,3 +25,19 @@ join_char <- function(first,
 
   return(new_string)
 }
+
+get_mode <- function(.x) {
+  .x <- unique(.x)
+  x_not_na <- .x[which(!is.na(.x))]
+  if(length(x_not_na) > 0) {
+    tab <- tabulate(match(.x, x_not_na))
+    candidates <- x_not_na[tab == max(tab)]
+    if (is.logical(.x)) {
+      any(candidates) # return TRUE if any true. max returns an integer
+    } else {
+      max(candidates) # return highest (ie max) value
+    }
+  } else {
+    .x[NA_integer_]
+  }
+}

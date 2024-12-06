@@ -211,10 +211,11 @@ stopifnot(is.character(type))
              )
     },
     #---- --- ---- --- ---- --- ---- --- ----- --- ----#
-    elastic_in = ifelse(t == 0,0,
-                        ifelse(t == 1,1
-                               -(2^(10*t-10))*sin((t*10-10.75)*2*pi/3))
-                        ),
+    elastic_in =  ifelse(t == 0, 0,
+                         ifelse(t == 1,1,
+                                -(2 ^ (10 * t - 10)) * sin((t * 10 - 10.75) * 2 * pi / 3)
+                         )
+    ),
     elastic_out = ifelse(t == 0,0,
                          ifelse(t ==1,1,
                                 2^(-10*t)*sin((t*10-0.75)*2*pi/3)+1)
