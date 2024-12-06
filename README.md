@@ -39,9 +39,37 @@ install.packages("sequentially")
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-# library(sequentially)
-## basic example code
+library(sequentially)
+
+# Linear sequence from 0 to 10
+ t <- seq(0,1,length.out = 100)
+ lin_seq <- seq_smooth(0, 10, n = 100, type = "linear")
+ plot.new()
+ plot.window(range(t),range(lin_seq))
+ points(t,lin_seq,pch = 16, cex = .75,col = "red")
+ axis(1,tcl = 0.75,lwd = 0, family = "serif")
+ axis(2,lwd = 0, family = "serif", las = 1)
+ grid(2,3,col = "gray80",lty = "dotted", lwd = 0.50)
+ mtext("Linear Sequence",3,cex = 1.3, family = "serif")
 ```
+
+<img src="man/figures/README-example-1.png" width="100%" />
+
+``` r
+
+
+ # Elastic easing out sequence
+ elastic_seq <- seq_smooth(0, 10, n = 100, type = "elastic", ease = "out")
+ plot.new()
+ plot.window(range(t),range(elastic_seq))
+ points(t,elastic_seq,pch = 16, cex = .75,col = "red")
+ axis(1,tcl = 0.75,lwd = 0, family = "serif")
+ axis(2,lwd = 0, family = "serif", las = 1)
+ grid(2,3,col = "gray80",lty = "dotted", lwd = 0.50)
+ mtext("Ease-out Elastic Sequence",3,cex = 1.3, family = "serif")
+```
+
+<img src="man/figures/README-example-2.png" width="100%" />
 
 What is special about using `README.Rmd` instead of just `README.md`?
 You can include R chunks like so:
