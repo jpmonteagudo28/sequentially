@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# sequentially <img src="man/figures/logo.png" align="right" height="195" alt="" />
+# sequentially <img src="man/figures/logo.png" align="right" height="250" alt="" />
 
 <!-- badges: start -->
 
@@ -19,15 +19,16 @@ non-linear interpolation the user can animate their data in a way that
 is more visually pleasing than uniform, linear interpolation. The
 functions in this package represent a break from the **essential** but
 *boring* `seq()` family of functions–I wanted to plot numeric sequences
-could be used in data visualization, motion animation, frame
-interpolation, UI/UX design, population dynamics, economics and finance.
+that looked different and could be used in data visualization, motion
+animation, frame interpolation, UI/UX design, population dynamics, or
+other fields.
 
 ## Installation
 
 You can install the development version of sequentially like so:
 
 ``` r
-devtools::install_github("sequentially")
+devtools::install_github("jpmonteagudo28/sequentially")
 ```
 
 or download it from CRAN:
@@ -55,7 +56,7 @@ library(sequentially)
  mtext("Linear Sequence",3,cex = 1.3, family = "serif")
 ```
 
-<img src="man/figures/README-example-1.png" width="85%" />
+<img src="man/figures/README-example-1.png" width="100%" />
 
 ``` r
 
@@ -71,7 +72,7 @@ library(sequentially)
  mtext("Ease-out Elastic Sequence",3,cex = 1.3, family = "serif")
 ```
 
-<img src="man/figures/README-example-2.png" width="85%" />
+<img src="man/figures/README-example-2.png" width="100%" />
 
 What is special about using `README.Rmd` instead of just `README.md`?
 You can include R chunks like so:

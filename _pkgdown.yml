@@ -3,10 +3,10 @@ url: https://sequentially.jpmonteagudo.com
 template:
   bootstrap: 5
   bslib:
-    bg: "#5697BF"
-    fg: "#035949"
-    primary: "#53075B"
-    base_font: {google: "Libre Franklin Light"}
+    bg: "#D3D6D9"
+    fg: "#172E73"
+    primary: "#D95B66"
+    base_font: {google: "Libre Franklin"}
     heading_font: {google: "Montserrat Alternates"}
     code_font: {google: "Fira Code"}
   theme: a11y-light

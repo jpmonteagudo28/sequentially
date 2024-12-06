@@ -22,7 +22,7 @@ seq_smooth(
 
 \item{type}{A character string indicating the type of smoothing to apply. Available options include \code{"linear"}, \code{"quad"}, \code{"cubic"}, \code{"quart"}, \code{"quint"}, \code{"exp"}, \code{"circle"}, \code{"back"}, \code{"elastic"}, \code{"sine"}, \code{"bounce"}, and \code{"step"}. Default is \code{"linear"}.}
 
-\item{step_count}{An integer specifying the number of discrete steps for the \code{"step"} type. If \code{NULL}, defaults to 4.}
+\item{step_count}{An integer specifying the number of discrete steps for the \code{"step"} type. If \code{NULL}, defaults to 4.The number of steps cannot exceed 'n'.}
 
 \item{ease}{A character string indicating the easing direction to apply. Available options are \code{"in"} (smooth transition at the start), \code{"out"} (smooth transition at the end), and \code{"in_out"} (smooth transition at both start and end). Required for non-linear types. Default is \code{NULL}.}
 }
