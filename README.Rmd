@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 [![CRAN status](https://www.r-pkg.org/badges/version/sequentially)](https://CRAN.R-project.org/package=sequentially)
 [![stability-wip](https://img.shields.io/badge/stability-wip-lightgrey.svg)](https://github.com/mkenney/software-guides/blob/master/STABILITY-BADGES.md#work-in-progress)
 [![Codecov test
-coverage](https://codecov.io/gh/jpmonteagudo28/guide/graph/badge.svg)](https://app.codecov.io/gh/jpmonteagudo28/sequentially)
+coverage](https://codecov.io/gh/jpmonteagudo28/sequentially/graph/badge.svg)](https://app.codecov.io/gh/jpmonteagudo28/sequentially)
 
 <!-- badges: end -->
 
