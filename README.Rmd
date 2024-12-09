@@ -60,7 +60,7 @@ library(sequentially)
  points(t,lin_seq,pch = 16, cex = .75,col = "red")
  axis(1,tcl = 0.75,lwd = 0, family = "serif")
  axis(2,lwd = 0, family = "serif", las = 1)
- grid(2,3,col = "gray80",lty = "dotted", lwd = 0.50)
+ grid(2,col = "gray80",lty = "dotted", lwd = 0.50)
  mtext("Linear Sequence",3,cex = 1.3, family = "serif")
 
 
@@ -71,7 +71,7 @@ library(sequentially)
  points(t,elastic_seq,pch = 16, cex = .75,col = "red")
  axis(1,tcl = 0.75,lwd = 0, family = "serif")
  axis(2,lwd = 0, family = "serif", las = 1)
- grid(2,3,col = "gray80",lty = "dotted", lwd = 0.50)
+ grid(2,col = "gray80",lty = "dotted", lwd = 0.50)
  mtext("Ease-out Elastic Sequence",3,cex = 1.3, family = "serif")
 ```
 

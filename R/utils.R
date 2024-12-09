@@ -1,19 +1,3 @@
-replace_char <- function(.input_string,
-                         old_char,
-                         new_char,
-                         use_regex = FALSE) {
-
-  if (old_char == "" || is.null(old_char)) {
-    stop("Error: The character to replace cannot be empty.")
-  }
-
-  gsub(old_char,
-       new_char,
-       .input_string,
-       fixed = !use_regex)
-
-}
-
 join_char <- function(first,
                       join_with = "_",
                       second){
@@ -39,5 +23,14 @@ get_mode <- function(.x) {
     }
   } else {
     .x[NA_integer_]
+  }
+}
+
+is.sequence <- function(x,...){
+
+  if(!inherits(x,"Sequence"))
+    FALSE
+  else {
+    TRUE
   }
 }
