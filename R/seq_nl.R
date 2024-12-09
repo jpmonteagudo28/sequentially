@@ -111,7 +111,10 @@ stopifnot(is.character(type))
     ease <- match.arg(ease, c("in", "out", "in_out"))
   }
 
-  # Compute normalized time
+  # Compute normalized time (t) as the y-component
+  # Time could be any range, but it complicates comparison if
+  # time range is not bounded. However, you can always
+  # normalize it to be bounded from [0,1]
   t <- seq(0, 1, length.out = n)
 
   # Linear sequence
@@ -196,9 +199,10 @@ stopifnot(is.character(type))
     #---- --- ---- --- ---- --- ---- --- ----- --- ----#
     circle_in = 1 - sqrt(1-t^2),
     circle_out = sqrt(1 - (t - 1)^2),
-    circle_in_out = ifelse(t < 0.5,
+    # Supress warnings about NA's
+    circle_in_out = supressWarnings({ifelse(t < 0.5,
                            (1 - sqrt(1 - (2 * t)^2)) / 2,
-                           0.5 * (sqrt(1 - (-2 * t + 2)^2) + 1)),
+                           0.5 * (sqrt(1 - (-2 * t + 2)^2) + 1))}),
     #---- --- ---- --- ---- --- ---- --- ----- --- ----#
     back_in = 2.70158*t^3 - 1.70158*t^2,
     back_out = 1 + 2.70158* (t-1)^3 + 1.70158*(t-1)^2,
@@ -270,5 +274,7 @@ stopifnot(is.character(type))
 
  smooth_seq <- from + smooth_fashion * (to-from)
 
- return(smooth_seq)
+ Sequence(values = smooth_seq,
+          type = type,
+          ease = ease)
 }

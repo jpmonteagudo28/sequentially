@@ -46,29 +46,29 @@
 #'
 #' @examples
 #' # Generate a linear sequence
-#' seq_data(1:10, type = "linear")
+#' interpolate(1:10, type = "linear")
 #'
 #' # Generate a quadratic easing sequence
-#' seq_data(rnorm(100,14,5), type = "quad", ease = "in_out")
+#' interpolate(rnorm(100,14,5), type = "quad", ease = "in_out")
 #'
 #' # Generate a stepped sequence with 5 steps
-#' seq_data(rpois(100,3), type = "step", step_count = 5)
+#' interpolate(rpois(100,3), type = "step", step_count = 5)
 #'
 #' @note
 #' This function supports various easing functions commonly used in animations and graphics, as well as
 #' stepped sequences for discrete transitions. Invalid or unsupported inputs will result in informative
 #' error messages or warnings.
 #'
-#' @importFrom stats approx
+#' @seealso [func(approx)]
 #' @export
 
-seq_data <- function(data,
+interpolate <- function(data,
                             type = "linear",
                             step_count = NULL,
                             ease = NULL){
 
   stopifnot(is.character(type),
-            is.numeric(data) || is.matrix(data) || is.data.frame(data) || is.list(data))
+            is.numeric(data) || is.matrix(data) || is.data.frame(data) || is.list(data) || is.sequence(data))
 
   if(!is.null(ease))
     if(!is.character(ease))
@@ -82,7 +82,7 @@ seq_data <- function(data,
   # Time could be any range, but it complicates comparison if
   # time range is not bounded. However, you can always
   # normalize it to be bounded from [0,1]
-  if (is.numeric(data)) {
+  if (is.numeric(data)|| is.sequence(data)) {
     n <- length(data)
   } else if (is.data.frame(data) || is.matrix(data)) {
     n <- nrow(data)
@@ -199,9 +199,10 @@ seq_data <- function(data,
     #---- --- ---- --- ---- --- ---- --- ----- --- ----#
     circle_in = 1 - sqrt(1-t^2),
     circle_out = sqrt(1 - (t - 1)^2),
-    circle_in_out = ifelse(t < 0.5,
+    # Supress warnings about NA's
+    circle_in_out = supressWarnings({ifelse(t < 0.5,
                            (1 - sqrt(1 - (2 * t)^2)) / 2,
-                           0.5 * (sqrt(1 - (-2 * t + 2)^2) + 1)),
+                           0.5 * (sqrt(1 - (-2 * t + 2)^2) + 1))}),
     #---- --- ---- --- ---- --- ---- --- ----- --- ----#
     back_in = 2.70158*t^3 - 1.70158*t^2,
     back_out = 1 + 2.70158* (t-1)^3 + 1.70158*(t-1)^2,
