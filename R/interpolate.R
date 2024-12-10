@@ -78,6 +78,7 @@ interpolate <- function(data,
                            "quint","exp","circle","back",
                            "elastic","sine","bounce","step"))
 
+
   # Compute normalized time (t) as the y-component
   # Time could be any range, but it complicates comparison if
   # time range is not bounded. However, you can always
@@ -91,6 +92,9 @@ interpolate <- function(data,
   } else {
     stop("Unsupported data type: data must be numeric, a data.frame, a matrix, or a list.")
   }
+
+  if(n <= 2)
+    stop("Data must be an object of length > 2")
 
   from <- min(data)
   to <- max(data)
@@ -274,5 +278,7 @@ interpolate <- function(data,
 
   smooth_seq <- from + smooth_fashion * (to-from)
 
-  return(smooth_seq)
+  Sequence(values = smooth_seq,
+           type = type,
+           ease = ease)
 }

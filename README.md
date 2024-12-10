@@ -9,7 +9,7 @@
 status](https://www.r-pkg.org/badges/version/sequentially)](https://CRAN.R-project.org/package=sequentially)
 [![stability-wip](https://img.shields.io/badge/stability-wip-lightgrey.svg)](https://github.com/mkenney/software-guides/blob/master/STABILITY-BADGES.md#work-in-progress)
 [![Codecov test
-coverage](https://codecov.io/gh/jpmonteagudo28/sequentially/branch/main/graph/badge.svg)](https://app.codecov.io/gh/jpmonteagudo28/sequentially?branch=main)
+coverage](https://codecov.io/gh/jpmonteagudo28/sequentially/graph/badge.svg)](https://app.codecov.io/gh/jpmonteagudo28/sequentially)
 
 <!-- badges: end -->
 
@@ -52,7 +52,7 @@ library(sequentially)
  points(t,lin_seq,pch = 16, cex = .75,col = "red")
  axis(1,tcl = 0.75,lwd = 0, family = "serif")
  axis(2,lwd = 0, family = "serif", las = 1)
- grid(2,3,col = "gray80",lty = "dotted", lwd = 0.50)
+ grid(2,col = "gray80",lty = "dotted", lwd = 0.50)
  mtext("Linear Sequence",3,cex = 1.3, family = "serif")
 ```
 
@@ -68,7 +68,7 @@ library(sequentially)
  points(t,elastic_seq,pch = 16, cex = .75,col = "red")
  axis(1,tcl = 0.75,lwd = 0, family = "serif")
  axis(2,lwd = 0, family = "serif", las = 1)
- grid(2,3,col = "gray80",lty = "dotted", lwd = 0.50)
+ grid(2,col = "gray80",lty = "dotted", lwd = 0.50)
  mtext("Ease-out Elastic Sequence",3,cex = 1.3, family = "serif")
 ```
 

@@ -88,6 +88,9 @@ stopifnot(is.character(type))
                            "quint","exp","circle","back",
                            "elastic","sine","bounce","step"))
 
+  if(n <= 2)
+    stop("'n' must be greater than 2")
+
   # Compute normalized time (t) as the y-component
   # Time could be any range, but it complicates comparison if
   # time range is not bounded. However, you can always
@@ -274,7 +277,8 @@ stopifnot(is.character(type))
 
  smooth_seq <- from + smooth_fashion * (to-from)
 
- Sequence(values = smooth_seq,
+  Sequence(values = smooth_seq,
           type = type,
           ease = ease)
+
 }
