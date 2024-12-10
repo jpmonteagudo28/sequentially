@@ -29,7 +29,7 @@ It supports linear, polynomial, exponential, and other smooth transitions, as we
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Interpolate a sequence of values with Easing or Stepping Given Data Points</h1>
-      <small class="dont-index">Source: <a href="https://github.com/jpmonteagudo28/sequentially/blob/main/R/seq_data_nl.R" class="external-link"><code>R/seq_data_nl.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/jpmonteagudo28/sequentially/blob/master/R/seq_data_nl.R" class="external-link"><code>R/seq_data_nl.R</code></a></small>
       <div class="d-none name"><code>interpolate.Rd</code></div>
     </div>
 
@@ -111,23 +111,9 @@ error messages or warnings.</p>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Generate a quadratic easing sequence</span></span></span>
 <span class="r-in"><span><span class="fu">interpolate</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">100</span>,<span class="fl">14</span>,<span class="fl">5</span><span class="op">)</span>, type <span class="op">=</span> <span class="st">"quad"</span>, ease <span class="op">=</span> <span class="st">"in_out"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1]  0.9383283  0.9438051  0.9602353  0.9876190  1.0259562  1.0752468</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [7]  1.1354909  1.2066885  1.2888396  1.3819442  1.4860022  1.6010138</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [13]  1.7269788  1.8638972  2.0117692  2.1705946  2.3403735  2.5211059</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [19]  2.7127918  2.9154311  3.1290239  3.3535702  3.5890700  3.8355233</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [25]  4.0929300  4.3612902  4.6406039  4.9308711  5.2320917  5.5442658</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [31]  5.8673934  6.2014745  6.5465091  6.9024971  7.2694386  7.6473336</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [37]  8.0361821  8.4359840  8.8467395  9.2684484  9.7011108 10.1447266</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [43] 10.5992960 11.0648188 11.5412951 12.0287248 12.5271081 13.0364448</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [49] 13.5567350 14.0879787 14.6274375 15.1586812 15.6789714 16.1883081</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [55] 16.6866914 17.1741211 17.6505974 18.1161203 18.5706896 19.0143055</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [61] 19.4469678 19.8686767 20.2794322 20.6792341 21.0680826 21.4459776</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [67] 21.8129191 22.1689071 22.5139417 22.8480228 23.1711504 23.4833245</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [73] 23.7845451 24.0748123 24.3541260 24.6224862 24.8798929 25.1263462</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [79] 25.3618460 25.5863923 25.7999851 26.0026244 26.1943103 26.3750427</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [85] 26.5448216 26.7036470 26.8515190 26.9884375 27.1144025 27.2294140</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [91] 27.3334720 27.4265766 27.5087277 27.5799253 27.6401694 27.6894601</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [97] 27.7277972 27.7551809 27.7716111 27.7770879</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Values:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  0.9383283 0.9438051 0.9602353 0.987619 1.025956 1.075247 1.135491 1.206689 1.28884 1.381944 1.486002 1.601014 1.726979 1.863897 2.011769 2.170595 2.340374 2.521106 2.712792 2.915431 3.129024 3.35357 3.58907 3.835523 4.09293 4.36129 4.640604 4.930871 5.232092 5.544266 5.867393 6.201475 6.546509 6.902497 7.269439 7.647334 8.036182 8.435984 8.846739 9.268448 9.701111 10.14473 10.5993 11.06482 11.5413 12.02872 12.52711 13.03644 13.55674 14.08798 14.62744 15.15868 15.67897 16.18831 16.68669 17.17412 17.6506 18.11612 18.57069 19.01431 19.44697 19.86868 20.27943 20.67923 21.06808 21.44598 21.81292 22.16891 22.51394 22.84802 23.17115 23.48332 23.78455 24.07481 24.35413 24.62249 24.87989 25.12635 25.36185 25.58639 25.79999 26.00262 26.19431 26.37504 26.54482 26.70365 26.85152 26.98844 27.1144 27.22941 27.33347 27.42658 27.50873 27.57993 27.64017 27.68946 27.7278 27.75518 27.77161 27.77709 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Generate a stepped sequence with 5 steps</span></span></span>
 <span class="r-in"><span><span class="fu">interpolate</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html" class="external-link">rpois</a></span><span class="op">(</span><span class="fl">100</span>,<span class="fl">3</span><span class="op">)</span>, type <span class="op">=</span> <span class="st">"step"</span>, step_count <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></span>
